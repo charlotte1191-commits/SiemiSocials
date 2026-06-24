@@ -1,0 +1,52 @@
+.phone-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.phone-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 24px calc(50% - 130px);
+  scrollbar-width: none;
+}
+
+.phone-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.phone-carousel-slide {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  transform: scale(0.78);
+  opacity: 0.5;
+  filter: blur(1px);
+  transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.phone-carousel-slide.is-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: none;
+  cursor: default;
+  z-index: 2;
+}
+
+@media (max-width: 880px) {
+  .phone-carousel-track {
+    padding: 16px calc(50% - 110px);
+    gap: 20px;
+  }
+
+  .phone-carousel-slide {
+    transform: scale(0.72);
+  }
+
+  .phone-carousel-slide.is-active {
+    transform: scale(1);
+  }
+}

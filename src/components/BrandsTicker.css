@@ -1,0 +1,58 @@
+.brands-ticker {
+  background: var(--cream);
+  padding: 32px var(--section-h);
+  border-bottom: 1px solid rgba(173, 194, 153, 0.3);
+}
+
+.brands-ticker-label {
+  display: block;
+  text-align: center;
+  font-family: var(--font-round);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--sage);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brands-ticker-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.brands-ticker-item {
+  width: 156px;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.brands-ticker-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 860px) {
+  .brands-ticker {
+    padding: 28px 24px;
+  }
+
+  .brands-ticker-item {
+    width: 120px;
+    height: 62px;
+  }
+}

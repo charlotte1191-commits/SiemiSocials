@@ -1,0 +1,37 @@
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.post-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px -12px rgba(74, 59, 56, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-card span {
+  width: 100%;
+  aspect-ratio: 3 / 5;
+  background: linear-gradient(150deg, var(--cream) 0%, var(--sage) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink);
+}

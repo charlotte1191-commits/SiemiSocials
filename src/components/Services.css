@@ -1,0 +1,41 @@
+.services {
+  background: var(--cream);
+  padding: var(--section-v) var(--section-h);
+}
+
+.services-heading {
+  max-width: var(--max-width);
+  margin: 0 auto 56px;
+}
+
+.services-tag {
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+
+.services-heading h2 {
+  font-size: 44px;
+  color: var(--ink);
+}
+
+.services-heading .italic-accent {
+  color: var(--sage);
+}
+
+.services-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 860px) {
+  .services {
+    padding: 64px 24px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

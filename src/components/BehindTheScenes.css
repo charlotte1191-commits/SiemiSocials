@@ -1,0 +1,74 @@
+.bts {
+  background: var(--sage);
+  padding: 90px var(--section-h);
+}
+
+.bts-head {
+  max-width: 640px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.bts-eyebrow {
+  color: rgba(30, 26, 46, 0.55);
+  margin-bottom: 16px;
+}
+
+.bts-heading {
+  font-size: clamp(28px, 4vw, 40px);
+  color: var(--ink);
+}
+
+.bts-pair {
+  max-width: var(--max-width);
+  margin: 0 auto 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.bts-pair:last-child {
+  margin-bottom: 0;
+}
+
+.bts-pair.is-reversed {
+  flex-direction: row-reverse;
+}
+
+.bts-pair-phone {
+  flex-shrink: 0;
+}
+
+.bts-pair-photo-frame {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bts-pair-photo {
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-card);
+  box-shadow: 0 24px 50px -18px rgba(30, 26, 46, 0.35);
+}
+
+@media (max-width: 860px) {
+  .bts {
+    padding: 56px 24px;
+  }
+
+  .bts-pair,
+  .bts-pair.is-reversed {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 48px;
+  }
+
+  .bts-pair-photo {
+    max-height: 460px;
+  }
+}

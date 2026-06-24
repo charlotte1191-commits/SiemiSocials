@@ -1,0 +1,5 @@
+.site-footer {
+  background: var(--ink);
+  padding: 26px var(--section-h);
+  margin-top: auto;
+}

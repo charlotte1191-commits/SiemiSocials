@@ -1,0 +1,31 @@
+.click-sparkle-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.click-sparkle {
+  position: fixed;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--cream) 0%, var(--blush) 55%, transparent 100%);
+  box-shadow: 0 0 6px 1px var(--blush);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+  animation: click-sparkle-pop 0.6s ease-out forwards;
+}
+
+@keyframes click-sparkle-pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(calc(-50% + var(--dx) * 0.3), calc(-50% + var(--dy) * 0.3)) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(0.2);
+    opacity: 0;
+  }
+}
