@@ -15,7 +15,7 @@ export default function PhoneShowcase({
   title,
   text,
   posts,
-  headingPrefix = 'A look inside the ',
+  headingPrefix = 'A closer look at the content',
   intro = '',
 }) {
   const hasPosts = posts && posts.length > 0;
@@ -25,14 +25,7 @@ export default function PhoneShowcase({
       <section className="phone-showcase">
         <div className="showcase-head">
           <span className="eyebrow">Content In Motion</span>
-          <h2>
-            {headingPrefix}
-            <span className="showcase-reels-highlight">
-              Reels
-              <span className="reels-sparkle reels-sparkle-left">✦</span>
-              <span className="reels-sparkle reels-sparkle-right">✦</span>
-            </span>
-          </h2>
+          <h2>{headingPrefix}</h2>
           <p>{intro}</p>
         </div>
 

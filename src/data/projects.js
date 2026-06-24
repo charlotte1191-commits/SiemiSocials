@@ -87,7 +87,7 @@ export const PROJECTS = [
     // / intro override PhoneShowcase's generic defaults with Milkybar-
     // specific copy, without touching what Superman's showcase shows.
     showcase: {
-      headingPrefix: 'Milkybar TikTok channel ',
+      headingPrefix: 'Milkybar TikTok channel',
       intro:
         '',
       phones: [
@@ -127,7 +127,8 @@ export const PROJECTS = [
     image: '/projects/tiktoks-reels-photography/photography4.png',
     category: 'Photography & Video',
     title: 'Reels, Photography & TikToks',
-    description: '',
+    description:
+      'I launched the Milkybar TikTok channel, generating 800k relevant engagements in the first 2 weeks.',
     // Bespoke editorial layout (full-bleed media + large broken-line type),
     // inspired by photographer-portfolio sites — see EditorialCaseStudy.jsx.
     // Order matches the order sections actually appear on the page below:
@@ -181,6 +182,13 @@ export const PROJECTS = [
           copy:
             'Smarties brand values are centred around fun and sustainability. This recycling craft tapped into both of those, I added extra value to the content by inviting Staedtler to get involved. They sent product for me to feature in the reel and we posted as a collaboration, mutually benefiting our reach and adding value to both our consumer bases.',
         },
+        {
+          videoSrc: '/projects/tiktoks-reels-photography/Reel9.mp4',
+          // [Placeholder] — the McDonald's Aero McFlurry trip copy supplied
+          // earlier wasn't carried over; paste it back in here.
+          copy: "This reel took consumers with us to McDonald’s to buy the new Aero McFlurry variations."
+
+        },
       ],
       blocks: [
         {
@@ -191,9 +199,21 @@ export const PROJECTS = [
         },
       ],
       tiktoks: [
-        '/projects/tiktoks-reels-photography/tiktok1.MP4',
-        '/projects/tiktoks-reels-photography/tiktok2.MP4',
-        '/projects/tiktoks-reels-photography/tiktok3.MP4',
+        {
+          videoSrc: '/projects/tiktoks-reels-photography/tiktok1.MP4',
+          sublabel:
+            'This utilised a piece of B roll I had shot from a different piece of video content but placed it in a trending moment.',
+        },
+        {
+          videoSrc: '/projects/tiktoks-reels-photography/tiktok2.MP4',
+          sublabel:
+            "The use of this trending audio took advantage of a trip to the CPW head office and their cupboard full of Cheerios. It fit with the brand's messaging of chaotic mornings being made a little less so with a bowl of Cheerios.",
+        },
+        {
+          videoSrc: '/projects/tiktoks-reels-photography/tiktok3.MP4',
+          sublabel:
+            'This playful TikTok takes inspiration from a viral video but places Cheerios at the centre. It was a space the brand could play in outside of the breakfast occasion as there was no consumption of the product.',
+        },
       ],
       // Hover/tap each photo to flip it and reveal the shoot notes on the back.
       photos: [

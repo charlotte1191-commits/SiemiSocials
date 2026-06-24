@@ -32,7 +32,7 @@
 }
 
 .about-teaser-heading {
-  font-size: 44px;
+  font-size: clamp(30px, 6vw, 44px);
   color: var(--ink);
 }
 

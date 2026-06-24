@@ -63,6 +63,18 @@ export default function PhoneCarousel({ phones }) {
 
   return (
     <div className="phone-carousel">
+      {phones.length > 1 && (
+        <button
+          type="button"
+          className="phone-carousel-arrow phone-carousel-arrow-left"
+          onClick={() => scrollToIndex(Math.max(activeIndex - 1, 0))}
+          disabled={activeIndex === 0}
+          aria-label="Previous"
+        >
+          &#8249;
+        </button>
+      )}
+
       <div className="phone-carousel-track" ref={trackRef}>
         {phones.map((phone, i) => (
           <div
@@ -75,6 +87,18 @@ export default function PhoneCarousel({ phones }) {
           </div>
         ))}
       </div>
+
+      {phones.length > 1 && (
+        <button
+          type="button"
+          className="phone-carousel-arrow phone-carousel-arrow-right"
+          onClick={() => scrollToIndex(Math.min(activeIndex + 1, phones.length - 1))}
+          disabled={activeIndex === phones.length - 1}
+          aria-label="Next"
+        >
+          &#8250;
+        </button>
+      )}
     </div>
   );
 }

@@ -1,6 +1,43 @@
 .phone-carousel {
   width: 100%;
+  position: relative;
   overflow: hidden;
+}
+
+.phone-carousel-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(30, 26, 46, 0.55);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.phone-carousel-arrow:hover {
+  background: rgba(30, 26, 46, 0.75);
+}
+
+.phone-carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.phone-carousel-arrow-left {
+  left: 8px;
+}
+
+.phone-carousel-arrow-right {
+  right: 8px;
 }
 
 .phone-carousel-track {
@@ -48,5 +85,9 @@
 
   .phone-carousel-slide.is-active {
     transform: scale(1);
+  }
+
+  .phone-carousel-arrow {
+    display: flex;
   }
 }

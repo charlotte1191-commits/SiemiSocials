@@ -31,7 +31,7 @@
 }
 
 .portfolio-preview-head h2 {
-  font-size: 44px;
+  font-size: clamp(28px, 6vw, 44px);
   color: var(--ink);
 }
 

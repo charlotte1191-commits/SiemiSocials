@@ -16,7 +16,7 @@
 
 .stat-value {
   font-family: var(--font-display);
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   font-weight: 600;
   color: var(--ink);
   line-height: 1;
@@ -41,5 +41,6 @@
 
   .stat {
     border-right: none;
+    padding: 0 8px;
   }
 }

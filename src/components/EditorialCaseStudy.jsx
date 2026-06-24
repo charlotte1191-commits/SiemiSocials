@@ -8,9 +8,9 @@ import './EditorialCaseStudy.css';
 // instead of the standard eyebrow/title/meta/approach template. Inspired by
 // editorial photographer portfolio sites (moody full-bleed imagery, large
 // type rhythm) but reworked into the site's sage/blush/cream palette.
-// `editorial.blocks` carries the narrative text rhythm; `reels`/`tiktoks`
-// (each an array of videoSrc strings) feed PhoneCarousel sections, and
-// `photos` (image paths) feed a full-bleed photography grid.
+// `editorial.blocks` carries the narrative text rhythm; `tiktoks` (an array
+// of { videoSrc, sublabel }) feeds the TikToks PhoneCarousel section, `reels`
+// feeds ReelGrid, and `photos` (image paths) feed a full-bleed photography grid.
 export default function EditorialCaseStudy({ project }) {
   const { editorial } = project;
 
@@ -83,7 +83,7 @@ export default function EditorialCaseStudy({ project }) {
       {editorial.tiktoks && (
         <section className="editorial-media-section">
           <h2 className="editorial-section-heading">TikToks</h2>
-          <PhoneCarousel phones={editorial.tiktoks.map((videoSrc) => ({ videoSrc }))} />
+          <PhoneCarousel phones={editorial.tiktoks} />
         </section>
       )}
 

@@ -6,7 +6,7 @@
 
 .contact-form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -21,6 +21,7 @@
 
 .contact-form-field input,
 .contact-form-field textarea {
+  width: 100%;
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 300;
