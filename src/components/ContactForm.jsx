@@ -9,28 +9,44 @@ const INITIAL_FORM = {
   message: '',
 };
 
-// TODO before launch: wire this up to a real submission handler
-// (Formspree, a Vercel serverless function, or similar). For now it just
-// logs to console and shows a confirmation message.
+// Submits to /api/contact (a Vercel serverless function — see api/contact.js)
+// which sends the message on to Charlotte's inbox via Resend.
 export default function ContactForm() {
   const [form, setForm] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [sending, setSending] = useState(false);
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log('Contact form submission:', form);
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   if (submitted) {
     return (
       <div className="contact-form-confirmation">
         <h3>Thanks, I'll be in touch.</h3>
-        <p>[Placeholder] I usually reply within a couple of working days.</p>
+        <p>I usually reply within a couple of working days.</p>
       </div>
     );
   }
@@ -75,8 +91,14 @@ export default function ContactForm() {
         <textarea name="message" rows={6} value={form.message} onChange={handleChange} required />
       </label>
 
-      <button type="submit" className="button-primary">
-        Send Message
+      {error && (
+        <p className="contact-form-error">
+          Something went wrong sending that — please try again, or email me directly.
+        </p>
+      )}
+
+      <button type="submit" className="button-primary" disabled={sending}>
+        {sending ? 'Sending…' : 'Send Message'}
       </button>
     </form>
   );

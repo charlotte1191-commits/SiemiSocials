@@ -83,9 +83,7 @@ export default function ProjectDetail() {
             project.approach.map((paragraph, i) => <p key={i}>{paragraph}</p>)
           ) : (
             <p>
-              [Placeholder] This is a blank case-study template, styled to match the rest of the
-              site. Once Charlotte has the real story for this project (the brief, the approach,
-              the results), this page gets its own bespoke layout.
+            
             </p>
           )}
         </div>

@@ -43,6 +43,16 @@
   margin-top: 8px;
 }
 
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-form-error {
+  font-size: 14px;
+  color: #b8472f;
+}
+
 .contact-form-confirmation {
   background: var(--cream);
   border-radius: var(--radius-card);

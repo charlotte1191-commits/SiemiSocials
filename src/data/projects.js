@@ -127,7 +127,7 @@ export const PROJECTS = [
     image: '/projects/tiktoks-reels-photography/photography4.png',
     category: 'Photography & Video',
     title: 'Reels, Photography & TikToks',
-    description: '[Placeholder]: a short summary of the campaign goals and results.',
+    description: '',
     // Bespoke editorial layout (full-bleed media + large broken-line type),
     // inspired by photographer-portfolio sites — see EditorialCaseStudy.jsx.
     // Order matches the order sections actually appear on the page below:
@@ -136,7 +136,7 @@ export const PROJECTS = [
       headingLines: ['Reels,', 'Photography &', 'TikToks'],
       italicLineIndex: 1,
       intro:
-        '[Placeholder] A look behind the camera at the content that actually fills the feed: the reels, the stills shot to support them, and the TikToks.',
+        'A look behind the camera at the content that actually fills the feed: the reels, the stills shot to support them, and the TikToks.',
       // Note: copy was also supplied for a "Reel9" (McDonald's Aero McFlurry
       // trip), but there's no Reel9 video file in the assets folder yet —
       // add it here once that clip is dropped in.
@@ -185,9 +185,9 @@ export const PROJECTS = [
       blocks: [
         {
           type: 'text',
-          heading: '[Placeholder] On set',
+          heading: 'On set',
           body:
-            '[Placeholder] Directing talent, framing the shot, and making sure every piece of content earns its place on the calendar before a single take is filmed.',
+            'Directing talent, framing the shot, and making sure every piece of content earns its place on the calendar before a single take is filmed.',
         },
       ],
       tiktoks: [
