@@ -23,7 +23,9 @@ export default async function handler(req, res) {
   try {
     const { error } = await resend.emails.send({
       from: 'Siemi Socials Contact Form <onboarding@resend.dev>',
-      to: 'charlotte119@live.co.uk',
+      // Resend's sandbox (no verified domain) only allows sending to the
+      // account's own signup address — switch this once a domain is verified.
+      to: 'charlotte1191@gmail.com',
       replyTo: email,
       subject: `New enquiry from ${firstName} ${lastName}`,
       text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nCompany: ${company || 'N/A'}\n\nMessage:\n${message}`,
