@@ -23,8 +23,10 @@ export default async function handler(req, res) {
   try {
     const { error } = await resend.emails.send({
       from: 'Siemi Socials Contact Form <onboarding@resend.dev>',
-      // Resend's sandbox (no verified domain) only allows sending to the
-      // account's own signup address — switch this once a domain is verified.
+      // Resend's sandbox (no verified domain) only delivers to the account's
+      // own signup address. charlotte1191@gmail.com is set up to auto-forward
+      // to Siemisocials@outlook.com — switch this directly once a domain is
+      // verified on resend.com/domains.
       to: 'charlotte1191@gmail.com',
       replyTo: email,
       subject: `New enquiry from ${firstName} ${lastName}`,

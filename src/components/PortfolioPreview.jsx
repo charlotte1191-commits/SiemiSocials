@@ -4,7 +4,7 @@ import WorkCard from './WorkCard';
 import './PortfolioPreview.css';
 
 export default function PortfolioPreview() {
-  const featured = PROJECTS.slice(0, 3);
+  const featured = PROJECTS.slice(0, 4);
 
   return (
     <section id="portfolio" className="portfolio-preview">
@@ -14,7 +14,7 @@ export default function PortfolioPreview() {
         <div>
           <p className="eyebrow portfolio-preview-tag">Selected Work</p>
           <h2>
-            Recent <span className="italic-accent">campaigns</span>
+             <span className="italic-accent">Portfolio</span>
           </h2>
         </div>
         <Link to="/portfolio" className="portfolio-preview-viewall">
