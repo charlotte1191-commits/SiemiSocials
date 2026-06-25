@@ -32,7 +32,7 @@ export default function SiteNav() {
         label={
           <>
             <span className="site-nav-logo-name">Charlotte Siemianowicz</span>
-            <span className="site-nav-logo-tagline">Social &middot; Strategy &middot; Story</span>
+            <span className="site-nav-logo-tagline">Social &middot; Strategy &middot; Brand</span>
           </>
         }
       />
